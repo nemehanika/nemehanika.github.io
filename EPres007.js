@@ -3,7 +3,7 @@ function cbImageStoreLoadFail() { alert("Image loading is failed"); }
 
 class c_imageStore
 { constructor(path)
-  { this.image = loadImage(path, null, cbImageStoreLoadFail);
+  { this.image = loadImage(path, null, cbImageStoreLoadFail); console.log(path);
     this.path = path;
     this.loaded = false;
   }
