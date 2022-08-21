@@ -303,75 +303,75 @@ function initSlides() { for (let i = 0; i < slideCount; i++) { sld[i] = new c_sl
 
 /////////////////////////////////// Load all images
 function images_init()
-{ imageStoreAdd("data\\logo.png");
-  imageStoreAdd("data\\s01_d01_seriya_STANDART.png");
-  imageStoreAdd("data\\s01_d02_seriya_COMFORT.png");
-  imageStoreAdd("data\\s01_d03_seriya_PREMIUM.png");
-  imageStoreAdd("data\\icon_return.png");
-  imageStoreAdd("data\\s02_d01_systema_Econo.png");
-  imageStoreAdd("data\\s02_d02_systema_Largo.png");
-  imageStoreAdd("data\\s02_d04_osobennosti_serii_STANDART.png");
-  imageStoreAdd("data\\s03_d01_systema_Euro.png");
-  imageStoreAdd("data\\s03_d02_systema_Lumo.png");
-  imageStoreAdd("data\\s03_d03_systema_Bravo.png");
-  imageStoreAdd("data\\s03_d04_preimushestva_serii_COMFORT.png");
-  imageStoreAdd("data\\s04_d01_systema_Primo.png");
-  imageStoreAdd("data\\s04_d02_preimushestva_serii_PREMIUM.png");
-  imageStoreAdd("data\\s05_e01_Lumo.jpg");
-  imageStoreAdd("data\\s05_e01_Lumo_mask.png");
-  imageStoreAdd("data\\s05_e03_Lumo_description_02.png");
-  imageStoreAdd("data\\s05_e02_Lumo_description.png");/**/
+{ imageStoreAdd("logo.png");
+  imageStoreAdd("s01_d01_seriya_STANDART.png");
+  imageStoreAdd("s01_d02_seriya_COMFORT.png");
+  imageStoreAdd("s01_d03_seriya_PREMIUM.png");
+  imageStoreAdd("icon_return.png");
+  imageStoreAdd("s02_d01_systema_Econo.png");
+  imageStoreAdd("s02_d02_systema_Largo.png");
+  imageStoreAdd("s02_d04_osobennosti_serii_STANDART.png");
+  imageStoreAdd("s03_d01_systema_Euro.png");
+  imageStoreAdd("s03_d02_systema_Lumo.png");
+  imageStoreAdd("s03_d03_systema_Bravo.png");
+  imageStoreAdd("s03_d04_preimushestva_serii_COMFORT.png");
+  imageStoreAdd("s04_d01_systema_Primo.png");
+  imageStoreAdd("s04_d02_preimushestva_serii_PREMIUM.png");
+  imageStoreAdd("s05_e01_Lumo.jpg");
+  imageStoreAdd("s05_e01_Lumo_mask.png");
+  imageStoreAdd("s05_e03_Lumo_description_02.png");
+  imageStoreAdd("s05_e02_Lumo_description.png");/**/
 }
 
 /////////////////////////////////// LOGO
-function logo_init() { setD(0); D.place(0.08, 1, 1, 1, -0.06, color(32, 66, 148)); D.setLabel(ISG("data\\logo.png"), 0, 0.75, 0.01, 0); D.loan = 0.015; D.active = false; }
+function logo_init() { setD(0); D.place(0.08, 1, 1, 1, -0.06, color(32, 66, 148)); D.setLabel(ISG("logo.png"), 0, 0.75, 0.01, 0); D.loan = 0.015; D.active = false; }
 function logo_start() { dsk[0].expand(); }
 function logo_draw() { background(cBack); dsk[0].draw(); }
 
 /////////////////////////////////// SLIDE 01 / серии: СТАНДАРТ - КОМФОРТ - ПРЕМИУМ
 function slide01_init()
 { setD(1); D.place(0, 1, 0.08, 1, -0.06, color(38, 84, 165)); D.active = false;
-  setD(2); D.place(0, 0, 1.0/3, 0, 0.94, color(0, 110, 185)); D.setLabel(ISG("data\\s01_d01_seriya_STANDART.png"), 0.8, 0, 0.05, 0.1); D.link = 2;
-  setD(3); D.place(1.0/3, 0.94, 2.0/3, 0.94, -0.94, color(195, 50, 115)); D.setLabel(ISG("data\\s01_d02_seriya_COMFORT.png"), 0.8, 0, 0.05, 0.1); D.link = 3;
-  setD(4); D.place(1, 0, 1, 0.94, -1.0/3, color(101, 82, 153)); D.setLabel(ISG("data\\s01_d03_seriya_PREMIUM.png"), 0.8, 0, 0.05, 0.1); D.link = 4;
+  setD(2); D.place(0, 0, 1.0/3, 0, 0.94, color(0, 110, 185)); D.setLabel(ISG("s01_d01_seriya_STANDART.png"), 0.8, 0, 0.05, 0.1); D.link = 2;
+  setD(3); D.place(1.0/3, 0.94, 2.0/3, 0.94, -0.94, color(195, 50, 115)); D.setLabel(ISG("s01_d02_seriya_COMFORT.png"), 0.8, 0, 0.05, 0.1); D.link = 3;
+  setD(4); D.place(1, 0, 1, 0.94, -1.0/3, color(101, 82, 153)); D.setLabel(ISG("s01_d03_seriya_PREMIUM.png"), 0.8, 0, 0.05, 0.1); D.link = 4;
   sld[1].setDsk(1, 4);
 }
 
 /////////////////////////////////// SLIDE 02 / продукты серии СТАНДАРТ: Econo - Largo - Особенности
 function slide02_init()
-{ setD(5); D.place(0, 1, 0.08, 1, -0.06, color(0, 110, 185)); D.setLabel(ISG("data\\icon_return.png"), 0.15, 0, 0.01, 0); D.link = 1;
-  setD(6); D.place(0, 0, 0.5, 0, 0.47, color(96, 94, 104)); D.setLabel(ISG("data\\s02_d01_systema_Econo.png"), 0.7, 0, 0.04, 0.04);
-  setD(7); D.place(0, 0.47, 0, 0.94, 0.5, color(89, 87, 97)); D.setLabel(ISG("data\\s02_d02_systema_Largo.png"), 0.7, 0, 0.04, 0.04);
-  setD(8); D.place(1, 0, 1, 0.94, -0.5, color(0, 110, 185)); D.setLabel(ISG("data\\s02_d04_osobennosti_serii_STANDART.png"), 0.7, 0, 0.04, 0.15); 
+{ setD(5); D.place(0, 1, 0.08, 1, -0.06, color(0, 110, 185)); D.setLabel(ISG("icon_return.png"), 0.15, 0, 0.01, 0); D.link = 1;
+  setD(6); D.place(0, 0, 0.5, 0, 0.47, color(96, 94, 104)); D.setLabel(ISG("s02_d01_systema_Econo.png"), 0.7, 0, 0.04, 0.04);
+  setD(7); D.place(0, 0.47, 0, 0.94, 0.5, color(89, 87, 97)); D.setLabel(ISG("s02_d02_systema_Largo.png"), 0.7, 0, 0.04, 0.04);
+  setD(8); D.place(1, 0, 1, 0.94, -0.5, color(0, 110, 185)); D.setLabel(ISG("s02_d04_osobennosti_serii_STANDART.png"), 0.7, 0, 0.04, 0.15); 
   sld[2].setDsk(5, 8);
 }
 
 /////////////////////////////////// SLIDE 03 / продукты серии КОМФОРТ: Euro - Lumo - Bravo - Преимущества
 function slide03_init()
-{ setD(9);  D.place(0, 1, 0.08, 1, -0.06, color(195, 50, 115)); D.setLabel(ISG("data\\icon_return.png"), 0, 0.6, 0.01, 0);  D.link = 1;
-  setD(10); D.place(0, 0, 0.5, 0, 0.47, color(96, 94, 104)); D.setLabel(ISG("data\\s03_d01_systema_Euro.png"), 0.7, 0, 0.04, 0.04);
-  setD(11); D.place(0, 0.47, 0, 0.94, 0.5, color(89, 87, 97)); D.setLabel(ISG("data\\s03_d02_systema_Lumo.png"), 0.7, 0, 0.04, 0.04); D.link = 5;
-  setD(12); D.place(0.5, 0.94, 1, 0.94, -0.47, color(82, 80, 90)); D.setLabel(ISG("data\\s03_d03_systema_Bravo.png"), 0.7, 0, 0.04, 0.04); 
-  setD(13); D.place(1, 0, 1, 0.47, -0.5, color(195, 50, 115)); D.setLabel(ISG("data\\s03_d04_preimushestva_serii_COMFORT.png"), 0.7, 0, 0.04, 0.04);
+{ setD(9);  D.place(0, 1, 0.08, 1, -0.06, color(195, 50, 115)); D.setLabel(ISG("icon_return.png"), 0, 0.6, 0.01, 0);  D.link = 1;
+  setD(10); D.place(0, 0, 0.5, 0, 0.47, color(96, 94, 104)); D.setLabel(ISG("s03_d01_systema_Euro.png"), 0.7, 0, 0.04, 0.04);
+  setD(11); D.place(0, 0.47, 0, 0.94, 0.5, color(89, 87, 97)); D.setLabel(ISG("s03_d02_systema_Lumo.png"), 0.7, 0, 0.04, 0.04); D.link = 5;
+  setD(12); D.place(0.5, 0.94, 1, 0.94, -0.47, color(82, 80, 90)); D.setLabel(ISG("s03_d03_systema_Bravo.png"), 0.7, 0, 0.04, 0.04); 
+  setD(13); D.place(1, 0, 1, 0.47, -0.5, color(195, 50, 115)); D.setLabel(ISG("s03_d04_preimushestva_serii_COMFORT.png"), 0.7, 0, 0.04, 0.04);
   sld[3].setDsk(9, 13);  
 }
 
 /////////////////////////////////// SLIDE 04 / продукты серии ПРЕМИУМ: Primo - Преимущества
 function slide04_init()
-{ setD(14); D.place(0, 1, 0.08, 1, -0.06, color(101, 82, 153)); D.setLabel(ISG("data\\icon_return.png"), 0, 0.6, 0.01, 0); D.link = 1;
-  setD(15); D.place(0, 0, 0, 0.94, 0.5, color(82, 80, 90)); D.setLabel(ISG("data\\s04_d01_systema_Primo.png"), 0.7, 0, 0.04, 0.15);
-  setD(16); D.place(0.5, 0, 1, 0, 0.94, color(101, 82, 153)); D.setLabel(ISG("data\\s04_d02_preimushestva_serii_PREMIUM.png"), 0.7, 0, 0.04, 0.15);
+{ setD(14); D.place(0, 1, 0.08, 1, -0.06, color(101, 82, 153)); D.setLabel(ISG("icon_return.png"), 0, 0.6, 0.01, 0); D.link = 1;
+  setD(15); D.place(0, 0, 0, 0.94, 0.5, color(82, 80, 90)); D.setLabel(ISG("s04_d01_systema_Primo.png"), 0.7, 0, 0.04, 0.15);
+  setD(16); D.place(0.5, 0, 1, 0, 0.94, color(101, 82, 153)); D.setLabel(ISG("s04_d02_preimushestva_serii_PREMIUM.png"), 0.7, 0, 0.04, 0.15);
   sld[4].setDsk(14, 16);  
 }
 
 /////////////////////////////////// SLIDE 05 / Продукт Lumo
 function slide05_init()
-{ setD(17); D.place(0, 0, 0, 1, 0.08, color(195, 50, 115)); D.setLabel(ISG("data\\icon_return.png"), 0.15, 0, 0.01, dsk[5].getLabelPlaceY(-1)); D.loan = 0.05; D.link = 3;
-  setD(18); D.place(0.08, 0, 1, 0, 0.94, color(89, 87, 97)); D.setLabel(ISG("data\\s03_d02_systema_Lumo.png"), 0.4, 0, 0.04, 0.04); D.active = false; 
+{ setD(17); D.place(0, 0, 0, 1, 0.08, color(195, 50, 115)); D.setLabel(ISG("icon_return.png"), 0.15, 0, 0.01, dsk[5].getLabelPlaceY(-1)); D.loan = 0.05; D.link = 3;
+  setD(18); D.place(0.08, 0, 1, 0, 0.94, color(89, 87, 97)); D.setLabel(ISG("s03_d02_systema_Lumo.png"), 0.4, 0, 0.04, 0.04); D.active = false; 
   sld[5].setDsk(17, 18);  
-  setE(1); E.placeWithMask(18, 0, 0.9, -0.04, 0, ISG("data\\s05_e01_Lumo.jpg"), ISG("data\\s05_e01_Lumo_mask.png"));
-  setE(2); E.place(18, 0, 0.9, -0.04, 0, ISG("data\\s05_e03_Lumo_description_02.png")); //E.zoom = 0;
-  setE(3); E.place(18, 0, 0.4, 0.04, -0.04, ISG("data\\s05_e02_Lumo_description.png")); //E.setSwitch(1,2,3);
+  setE(1); E.placeWithMask(18, 0, 0.9, -0.04, 0, ISG("s05_e01_Lumo.jpg"), ISG("s05_e01_Lumo_mask.png"));
+  setE(2); E.place(18, 0, 0.9, -0.04, 0, ISG("s05_e03_Lumo_description_02.png")); //E.zoom = 0;
+  setE(3); E.place(18, 0, 0.4, 0.04, -0.04, ISG("s05_e02_Lumo_description.png")); //E.setSwitch(1,2,3);
   sld[5].setElm(1, 3);
 }
 
